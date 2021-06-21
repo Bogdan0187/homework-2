@@ -1,0 +1,32 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner introducetiInaltimea = new Scanner(System.in);
+        System.out.println("Va rugam introduceti inaltimea dumneavoastra in metri (m): ");
+       double Inaltimea = introducetiInaltimea.nextDouble();
+
+       Scanner introducetiGreutatea = new Scanner(System.in);
+        System.out.println("Va rugam introduceti greutatea dumneavoastra in kilograme (kg):");
+        double Greutatea = introducetiGreutatea.nextDouble();
+
+        double indiceleDeGreutate = Greutatea/(Inaltimea*2);
+
+        if (indiceleDeGreutate<=18.49) {
+            System.out.println("Indicele dumneavoastra de greutate indica faptul ca sunteti subponderal");
+        } else if (indiceleDeGreutate>=18.5 && indiceleDeGreutate<=24.99) {
+            System.out.println("Indicele dumneavoastra de greutate indica faptul ca aveti o greutate normala. Riscul de a va imbolnavi este redus.");
+        } else if(indiceleDeGreutate>=25 && indiceleDeGreutate<= 29.99) {
+            System.out.println("Indicele dumneavoastra de greutate indicata faptul ca sunteti supraponderal.");
+        } else if (indiceleDeGreutate>=30 && indiceleDeGreutate<= 34.99) {
+            System.out.println("Indicele dumneavoastra de greutate indicata faptul ca suferiti de obezitate de gradul I.");
+        } else if(indiceleDeGreutate>= 35 && indiceleDeGreutate<= 39.99) {
+            System.out.println("Indicele dumneavoastra de greutate indicata faptul ca suferiti de obezitate de gradul II.");
+        } else if(indiceleDeGreutate>=40){
+        System.out.println("Indicele dumneavoastra de greutate indicata faptul ca suferiti de obezitate morbida!");
+        }
+    }
+}
